@@ -18,6 +18,14 @@ con.connect(function(err) {
 
 */
 
+const responseData = [
+    {name: 'Adam Sandler'},
+    {name: 'Max Levishov'},
+    {name: 'Sam Anders'},
+    {name: 'Taylor Hebert'},
+    {name: 'Ash Ketchum'},
+]
+
 class HandlerGenerator {
     async get_modules_count (req, res) {
         let count;
@@ -28,9 +36,8 @@ class HandlerGenerator {
         //         count: rows.length
         //     });
         // });
-        res.json({
-            count: 11
-        });
+        res.json(responseData
+        );
     }
 }
 
